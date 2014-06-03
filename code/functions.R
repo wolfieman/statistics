@@ -24,7 +24,7 @@ downloadFileXLSX <- function() {
     dateDownloaded <- date()
 }
 
-downloadJiraFilterXLSX <- function(fileUrl = "https://jira.benefitfocus.com/sr/jira.issueviews:searchrequest-excel-current-fields/24033/SearchRequest-24033.xls?tempMax=1000&os_username=wsanyer&os_password=fox11you", rootDir = "./data/jira/", fileName = "jira1.xls") {
+downloadJiraFilterXLSX <- function(fileUrl = "", rootDir = "./data/jira/", fileName = "jira1.xls") {
     if(!file.exists(rootDir)) { dir.create(rootDir) }
     destFile <- paste(rootDir, fileName, sep = "")
     method <- "curl"
